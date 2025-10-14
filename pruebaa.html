@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+        <a-assets timeout="30000">
+            <a-asset-item id="character" src="untitled.glb"></a-asset-item>
+        </a-assets>
+        <a-scene>            
+            <a-assets timeout="30000">
+                <a-asset-item id="character" src="untitled.glb"></a-asset-item>
+            </a-assets>
+            
+            <a-camera position="0 1.6 0"></a-camera>
+            <a-entity id="character" position="0 0 -2" scale="1.0 1.0 1.0"> <!--x,y,z y tamaño del modelo-->
+                <a-entity 
+                        position="0 0.5 0" rotation="0 0 0"
+                        gltf-model="#character"
+                        animation-mixer
+                        shadow="cast: true; receive: false">
+                </a-entity>
+            </a-entity>
+        </a-scene>
+  </body>
+<html>
